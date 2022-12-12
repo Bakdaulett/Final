@@ -4,9 +4,9 @@
     --color-white:hsl(252, 30%, 100%);
     --color-light:hsl(252, 30%, 95%);
     --color-gray:hsl(252, 15%, 65%);
-    --color-primary:hsl(252, 75%, 60%);
+    --color-primary:#e1ad01;
     --color-secondary:hsl(252, 100%, 90%);
-    --color-success:hsl(120, 95%, 65%);
+    --color-success: #73a580;
     --color-danger:hsl(0, 95%, 65%);
     --color-dark:hsl(252, 30%, 17%);
     --color-black:hsl(252, 30%, 10%);
@@ -54,6 +54,14 @@ body{
     display:block;
     width:100%;
  }
+ 
+ #main-logo{
+    width: 4.5rem;
+    margin-left: 5.1px;
+ }
+ h2{
+    margin-right: 100px;
+ }
 
  .btn{
     display: inline-block;
@@ -70,7 +78,7 @@ body{
  }
 
  .btn-primary{
-    background: var(--color-primary);
+    background: var(--color-success);
     color:white;
  }
 
@@ -195,7 +203,7 @@ main .container .left .profile {
 
 .left .sidebar .active i, 
 .left .sidebar .active h3{
-    color:var(--color-primary);
+    color:var(--color-success);
 }
 
 .left .sidebar .active::before{
@@ -204,7 +212,7 @@ main .container .left .profile {
     width:0.2rem;
     height: 100%;
     position: absolute;
-    background: var(--color-primary);
+    background: var(--color-success);
 }
 
 .left .sidebar .menu-item:first-child.active{
@@ -344,6 +352,26 @@ main .container .left .profile {
     color: var(--color-dark);
     margin-right: 1rem;
 }
+
+/*----------------------------FEEDS-------------------------------*/
+.middle .feeds .feed{
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    margin: 1rem 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.middle .feed .head{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
 
 
 
