@@ -40,43 +40,58 @@ login.addEventListener("click", () => {
 //     }
 // }
 
-function log_php(lastEmail, lastPassword){
+
+function log_php(lastEmail, lastPassword) {
+    // var link = document.createElement("a")
+    // link.href = "index.html";
+    // link.target = "_blank";
     $.ajax({
         url: 'log.php',
         type: 'POST',
         data: {email: lastEmail, password: lastPassword},
-        success: function (result){
+        success: function (result) {
             console.log(result);
-            if(result == "Logged IN!"){
-                window.alert("You have logged in successfully!")
-            }
-            else window.alert("Wrong login or password")
+            if (result == "Logged IN!") {
+                alert("fasfafs")
+                window.open("index.html", "_self")
+            } else window.alert("Wrong login or password")
         },
-        error: function (){
-            console.log ('error');
+        error: function () {
+            console.log('error');
             window.alert("Error!");
         }
     });
 }
-function reg_php(email, pass, pass2){
-    if(pass == pass2){
+
+function reg_php(email, pass, pass2, username) {
+    if (pass == pass2) {
         $.ajax({
-            url : 'reg.php',
-            type : 'POST',
-            data: {email: email, password: pass},
-            success : function (result) {
-                console.log (result);
-                if(result === "Success!")
-                    window.alert("Success") ;
+            url: 'reg.php',
+            type: 'POST',
+            data: {email: email, password: pass, username: username},
+            success: function (result) {
+                console.log(result);
+                if (result === "Success!")
+                    window.alert("Success");
                 else window.alert("Wrong input");
             },
-            error : function () {
-                console.log ("Error");
+            error: function () {
+                console.log("Error");
             }
         });
-    }
-    else{
+    } else {
         alert("different password inputs!");
     }
 }
 
+function onClicking(element) {
+    var a = element;
+
+}
+
+function registration() {
+    var link = document.createElement("a")
+    link.href = "registration.html";
+    link.target = "_self";
+    link.click()
+}

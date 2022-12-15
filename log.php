@@ -13,8 +13,11 @@ if($link === false){
 if(isset($_POST['email'])){
     $uemail = $_POST['email'];
     $upassword = $_POST['password'];
+    $username = $_POST['username'];
 
-    $sql = "select * from users where email = '$uemail' AND password = '$upassword' limit 1";
+    $sql = "select * from users where email = '".$uemail."' AND password = '".$upassword."' limit 1";
+    $sql2 = "select * from users where username = '".$username."' limit 1";
+
 
     $result = mysqli_query($link, $sql);
 

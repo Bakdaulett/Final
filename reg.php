@@ -12,14 +12,15 @@ $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
 // Check connection
 if ($link === false) {
-    die("ERROR: Could not connect. " . mysqli_connect_error());
+    die("ERROR: Could not connect. " .mysqli_connect_error());
 }
 
 if (isset($_POST['email'])) {
     $uemail = $_POST['email'];
     $upassword = $_POST['password'];
+    $name = $_POST['username'];
 
-    $sql = "insert into users(id, email, password) values (NULL, '$uemail', '$upassword')";
+    $sql = "insert into users(id, email, password, username) values (NULL, '$uemail', '$upassword', '$name')";
 
     $result = mysqli_query($link, $sql);
 
