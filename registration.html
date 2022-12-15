@@ -1,10 +1,99 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" rel="stylesheet">
+    <link href="reg.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link href="images/logo-clickpaw.png" rel="shortcut icon"
+          type="image/x-icon"/>
+    <title>Registration or Login</title>
 </head>
 <body>
+<div class="container">
+    <div class="forms">
+        <div class="form login">
+            <span class="title">Login</span>
+            <form action="#">
+                <div class="input-field">
+                    <input placeholder="Enter your email" required type="email" id = "lastEmail" name = "email">
+                    <i class="uil uil-envelope icon"></i>
+                </div>
+                <div class="input-field">
+                    <input class="password" placeholder="Enter your password" required type="password" id = "lastPassword" name = "password">
+                    <i class="uil uil-lock icon"></i>
+                    <i class="uil uil-eye-slash showHidePw"></i>
+                </div>
+                <div class="checkbox-text">
+                    <div class="checkbox-content">
+                        <input id="logCheck" type="checkbox">
+                        <label class="text" for="logCheck">Remember me</label>
+                    </div>
+                    <a class="text" href="#">Forgot password?</a>
+                </div>
+                <div class="input-field button">
+                    <input type="submit" value="Login" onclick="log_php(lastEmail.value, lastPassword.value)">
+                </div>
+            </form>
+            <div class="login-signup">
+                <span class="text">Not registered yet?</span>
+                <a class="text signup-link" href="#">Signup Now</a>
+                </span>
+            </div>
+        </div>
+        <div class="form signup">
+            <span class="title" style="">Registration</span>
+            <form action="#">
+                <div class="input-field">
+                    <input placeholder="Enter your name" required type="text"autocomplete="on">
+                    <i class="uil uil-user"></i>
+                </div>
+                <div class="input-field">
+                    <input placeholder="Enter your email" required type="email" id = "email" name = "email">
+                    <i class="uil uil-envelope icon"></i>
+                </div>
+                <div class="input-field">
+                    <input placeholder="Enter your age" required type="number" min = "21">
+                    <i class="uil uil-21-plus"></i>
+                </div>
+                <div class="input-field">
+                    <input class="password" id="pass" placeholder="Create a password" required type="password" name = "password">
+                    <i class="uil uil-lock icon"></i>
+                </div>
+                <div class="input-field">
+                    <input class="password" id="pass2" placeholder="Confirm a password" required type="password" name = "password">
+                    <i class="uil uil-lock icon"></i>
+                    <i class="uil uil-eye-slash showHidePw"></i>
+                </div>
+                <div class="gender">
+                    <input checked id="male" name="gender" type="radio" value="None"/>
+                    <label class="radio" for="male">Male</label>
+                    <input id="female" name="gender" type="radio" value="None"/>
+                    <label class="radio" for="female">Female</label>
+                </div>
+                <div class="checkbox-text">
+                    <div class="checkbox-content">
+                        <input id="termCon" type="checkbox">
+                        <label class="text" for="termCon" id="check">I accepted all terms and conditions</label>
+                    </div>
+                </div>
 
+                <div class="input-field button">
+                    <input onclick="reg_php(email.value, pass.value, pass2.value)" type="submit" value="Signup">
+                </div>
+            </form>
+
+            <div class="login-signup">
+                <span class="text">Already registered?</span>
+                <a class="text login-link" href="#">Login Now</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="reg.js"></script>
 </body>
 </html>
+
