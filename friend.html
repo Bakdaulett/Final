@@ -2,9 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Friend</title>
+    <link rel="stylesheet" href="friend.css">
 </head>
 <body>
+HTML CSS JS Result
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-9 mx-auto mt-5">
+            <div class="card shadow">
+                <h3 class="card-header">Add New</h3>
+                <div class="card-body">
+                    <form id="new-friend">
+                        <div class="form-group">
+                            <label for="friendName">Friend Name</label>
+                            <input type="text" class="form-control" id="friendName" placeholder="You Friend name?"
+                                   required>
+                        </div>
+                        <button type="submit" class="btn btn-info btn-block mt-3">Add to list</button>
+                    </form>
+                </div>
+            </div>
 
+            <div class="card mt-3">
+                <h3 class="card-header">All Friends</h3>
+                <div class="card-body">
+                    <ul id="friend-output" class="list-group">
+                        <li class="list-group-item">Motu</li>
+                        <li class="list-group-item">Patlu</li>
+                        <li class="list-group-item">John</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    Resources 1× 0.5× 0.25× Rerun
+    <!-- profile created via JS -->
+    <script src="friend.js"></script>
 </body>
 </html>
