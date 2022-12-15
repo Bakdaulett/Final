@@ -5,6 +5,8 @@
     <title>CLICKPAW</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href="images/logo-clickpaw.png" rel="shortcut icon"
+          type="image/x-icon"/>
 </head>
 <body>
     <nav>
@@ -16,7 +18,7 @@
                 <input type="search" placeholder="Search for creators,inspirations and projects">
             </div>
             <div class="create">
-                <label class="btn btn-primary" for="create-post">Create</label>
+                <label class="btn btn-primary" for="create-post" onclick="registration()">Sign up</label>
                 <div class="profile-photo">
                     <img src="images\profile-1.jpg">
                 </div>
@@ -110,8 +112,8 @@
                     <a class="menu-item" id="messages-notifications">
                         <span><i class="uil uil-envelope-alt"><small class="notification-count">6</small></i></span><h3>Message</h3>
                     </a>
-                    <a class="menu-item">
-                        <span><i class="uil uil-bookmark"></i></span><h3>Bookmarks</h3>
+                    <a class="menu-item" href = "registration.html">
+                        <span><i class="uil uil-bookmark"></i></span><h3>Friends</h3>
                     </a>
                     <a class="menu-item">
                         <span><i class="uil uil-chart-line"></i></span><h3>Analytics</h3>
@@ -244,5 +246,6 @@
             
         </div>
     </main>
+<script src = "script.js"></script>
 </body>
 </html>
