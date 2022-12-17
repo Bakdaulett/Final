@@ -362,3 +362,36 @@ section {
     font-size: 3rem;
   }
 }
+
+
+.header .navbar a {
+  color: black; /* Цвет обычной ссылки */
+  position: relative;
+  cursor: pointer;
+  text-decoration: none; /* Убираем подчеркивание */
+}
+
+.header .navbar a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -0.05vw;
+  width: 0;
+  height: 0.1vw; /* Высота линии */
+  background-color: #219150; /* Цвет подчеркивания при исчезании линии*/
+  transition: width 0.3s; /* Время эффекта */
+}
+
+.header .navbar a:hover:after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -0.05vw;
+  height: 0.1vw; /* Высота линии */
+  background-color: #219150; /* Цвет подчеркивания при появлении линии*/
+  transition: width 0.3s; /* Время эффекта */
+}
+
