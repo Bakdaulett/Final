@@ -47,6 +47,7 @@ section {
   padding: 1rem 3rem;
 }
 
+
 .btn:hover {
   background: #10221b;
   color: #fff;
@@ -91,11 +92,11 @@ section {
   color: #219150;
 }
 
-/*.header .navbar a {*/
-/*  margin-left: 2rem;*/
-/*  font-size: 1.7rem;*/
-/*  color: #10221b;*/
-/*}*/
+.header .navbar a {
+  margin-left: 2rem;
+  font-size: 1.7rem;
+  color: #10221b;
+}
 
 .header .navbar a:hover {
   color: #219150;
@@ -344,10 +345,10 @@ section {
     -webkit-box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
             box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
   }
-  /*.header .navbar a {*/
-  /*  margin: 1rem 0;*/
-  /*  font-size: 3rem;*/
-  /*}*/
+  .header .navbar a {
+    margin: 1rem 0;
+    font-size: 3rem;
+  }
   .header .navbar #nav-close {
     display: block;
     position: absolute;
