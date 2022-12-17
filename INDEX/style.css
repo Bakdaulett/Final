@@ -91,14 +91,15 @@ section {
   color: #219150;
 }
 
-.header .navbar a {
-  margin-left: 2rem;
-  font-size: 1.7rem;
-  color: #10221b;
-}
+/*.header .navbar a {*/
+/*  margin-left: 2rem;*/
+/*  font-size: 1.7rem;*/
+/*  color: #10221b;*/
+/*}*/
 
 .header .navbar a:hover {
   color: #219150;
+  font-size: 2.5rem;
 }
 
 .header .navbar #nav-close {
@@ -254,6 +255,11 @@ section {
   text-transform: uppercase;
 }
 
+.home .box .content h3:hover {
+  transform: translate3d(0, -10px, 22px);
+  color: mediumspringgreen;
+}
+
 .home .box .content p {
   line-height: 2;
   color: #10221b;
@@ -338,10 +344,10 @@ section {
     -webkit-box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
             box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
   }
-  .header .navbar a {
-    margin: 1rem 0;
-    font-size: 3rem;
-  }
+  /*.header .navbar a {*/
+  /*  margin: 1rem 0;*/
+  /*  font-size: 3rem;*/
+  /*}*/
   .header .navbar #nav-close {
     display: block;
     position: absolute;
@@ -365,33 +371,35 @@ section {
 
 
 .header .navbar a {
-  color: black; /* Цвет обычной ссылки */
+  margin-left: 2rem;
+  font-size: 1.8rem;
+  color: #10221b;
   position: relative;
   cursor: pointer;
   text-decoration: none; /* Убираем подчеркивание */
 }
 
-.header .navbar a:after {
-  content: "";
-  display: block;
-  position: absolute;
-  right: 0;
-  bottom: -0.05vw;
-  width: 0;
-  height: 0.1vw; /* Высота линии */
-  background-color: #219150; /* Цвет подчеркивания при исчезании линии*/
-  transition: width 0.3s; /* Время эффекта */
-}
+/*.header .navbar a:after {*/
+/*  content: "";*/
+/*  display: block;*/
+/*  position: absolute;*/
+/*  right: 0;*/
+/*  bottom: -0.05vw;*/
+/*  width: 0;*/
+/*  height: 0.1vw; !* Высота линии *!*/
+/*  background-color: #219150; !* Цвет подчеркивания при исчезании линии*!*/
+/*  transition: width 0.3s; !* Время эффекта *!*/
+/*}*/
 
-.header .navbar a:hover:after {
-  content: "";
-  width: 100%;
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: -0.05vw;
-  height: 0.1vw; /* Высота линии */
-  background-color: #219150; /* Цвет подчеркивания при появлении линии*/
-  transition: width 0.3s; /* Время эффекта */
-}
+/*.header .navbar a:hover:after {*/
+/*  content: "";*/
+/*  width: 100%;*/
+/*  display: block;*/
+/*  position: absolute;*/
+/*  left: 0;*/
+/*  bottom: -0.05vw;*/
+/*  height: 0.1vw; !* Высота линии *!*/
+/*  background-color: #219150; !* Цвет подчеркивания при появлении линии*!*/
+/*  transition: width 0.3s; !* Время эффекта *!*/
+/*}*/
 
