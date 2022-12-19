@@ -1,5 +1,9 @@
 //index js
 
+
+
+
+///registr
 $(document).ready(function(){
 
     $("#tagline-container > div").removeClass("opaque");
