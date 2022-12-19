@@ -150,7 +150,9 @@ login.addEventListener("click", () => {
 //     }
 // }
 
-
+document.querySelector("form").addEventListener('submit',(event)=>{
+    event.preventDefault();
+})
 function log_php(lastEmail, lastPassword) {
     // var link = document.createElement("a")
     // link.href = "index.html";
@@ -161,9 +163,8 @@ function log_php(lastEmail, lastPassword) {
         data: {email: lastEmail, password: lastPassword},
         success: function (result) {
             console.log(result);
-            if (result == "Logged IN!") {
-                alert("fasfafs")
-                window.open("/INDEX/index.html", "_self")
+            if (result === "login") {
+                window.open("/Final/INDEX/index.html", "_self")
             } else window.alert("Wrong login or password")
         },
         error: function () {
@@ -173,6 +174,7 @@ function log_php(lastEmail, lastPassword) {
     });
 }
 
+
 function reg_php(email, pass, pass2, username) {
     if (pass == pass2) {
         $.ajax({
@@ -181,7 +183,7 @@ function reg_php(email, pass, pass2, username) {
             data: {email: email, password: pass, username: username},
             success: function (result) {
                 console.log(result);
-                if (result === "Success!")
+                if (result == "Success!")
                     window.alert("Success");
                 else window.alert("Wrong input");
             },
@@ -194,14 +196,9 @@ function reg_php(email, pass, pass2, username) {
     }
 }
 
-function onClicking(element) {
-    var a = element;
+// function onClicking(element) {
+//     var a = element;
+//
+// }
 
-}
 
-function registration() {
-    var link = document.createElement("a")
-    link.href = "registration.html";
-    link.target = "_self";
-    link.click()
-}
