@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
 * {
   font-family: 'Poppins', sans-serif;
@@ -11,6 +12,9 @@
   text-transform: capitalize;
   -webkit-transition: .2s linear;
   transition: .2s linear;
+}
+.all{
+  background: #eee;
 }
 
 html {
@@ -160,47 +164,389 @@ body{
 	position: relative;
 	perspective: 1000px;
 }
-#carousel{
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	transform-style: preserve-3d;
-	animation: rotation 20s infinite linear;
-}
-#carousel:hover{
-	animation-play-state: paused;
-}
-#carousel figure{
-	display: block;
-	position: absolute;
-	width: 186px;
-	height: 116px;
-	left: 10px;
-	top: 10px;
-	background: black;
-	overflow: hidden;
-	border: solid 5px black;
-}
-#carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(288px);}
-#carousel figure:nth-child(2) { transform: rotateY(40deg) translateZ(288px);}
-#carousel figure:nth-child(3) { transform: rotateY(80deg) translateZ(288px);}
-#carousel figure:nth-child(4) { transform: rotateY(120deg) translateZ(288px);}
-#carousel figure:nth-child(5) { transform: rotateY(160deg) translateZ(288px);}
-#carousel figure:nth-child(6) { transform: rotateY(200deg) translateZ(288px);}
-#carousel figure:nth-child(7) { transform: rotateY(240deg) translateZ(288px);}
-#carousel figure:nth-child(8) { transform: rotateY(280deg) translateZ(288px);}
-#carousel figure:nth-child(9) { transform: rotateY(320deg) translateZ(288px);}
 
 
-@keyframes rotation{
-	from{
-		transform: rotateY(0deg);
-	}
-	to{
-		transform: rotateY(360deg);
-	}
+.globe{
+  width:500px;
+  height:500px;
+  margin:50px auto;
+  border-radius:50%;
+  overflow:hidden;
+  position:relative;
+   background:#2b333f;
 }
 
+.moon{
+  position:absolute;
+  right:30px;
+  top:30px;
+  width:150px;
+  height:150px;
+  background:#d2e8e6;
+  border-radius:50%;
+  -webkit-animation: glow 1.5s ease-in-out infinite alternate;
+  -moz-animation: glow 1.5s ease-in-out infinite alternate;
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+.moon-scar{
+  position:absolute;
+}
+
+.star{
+  width:3px;
+  height:3px;
+  background:#fff;
+  border-radius:50%;
+  position:absolute;
+}
+.stars .star:nth-child(1){
+  left:100px;
+  top:100px;
+}
+.stars .star:nth-child(2){
+  left:150px;
+  top:150px;
+}
+.stars .star:nth-child(3){
+  left:120px;
+  top:80px;
+}
+.stars .star:nth-child(4){
+  left:220px;
+  top:100px;
+}
+.stars .star:nth-child(5){
+  left:240px;
+  top:140px;
+}
+.stars .star:nth-child(6){
+  left:280px;
+  top:190px;
+}
+.stars .star:nth-child(7){
+  left:290px;
+  top:170px;
+}
+.stars .star:nth-child(8){
+  left:290px;
+  top:200px;
+}
+.moon-scar-1{
+  width:15px;
+  height:15px;
+  border-radius:50%;
+  background:#cadad6;
+  position:absolute;
+  top:20px;
+  left:40px;
+}
+
+.moon-scar-2{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  background:#cadad6;
+  position:absolute;
+  top:40px;
+  left:15px;
+}
+.moon-scar-3{
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  background:#cadad6;
+  position:absolute;
+  top:80px;
+  left:30px;
+}
+.van{
+  position:relative;
+  width:400px;
+  background:#2b333f;
+  margin-top:250px;
+  opacity:0.8;
+  transform:scale(0.7);
+  animation: travel 5s ease-in infinite;
+}
+.van-body{
+  width:100%;
+  height:170px;
+  background:black;
+  border-radius: 20px 80px 10px 10px;
+  z-index:1;
+  position:relative;
+  animation: bounce .25s ease-in-out infinite alternate;
+}
+.windows{
+  width:100%;
+  height:40px;
+  background:#fff;
+  border-radius: 0px 55px 0px 0px;
+}
+
+.window{
+  width:60px;
+  height:50px;
+  background:teal;
+  float:left;
+  margin-right:10px;
+  margin-top:10px;
+  border-radius: 5px;
+  overflow:hidden;
+  border-top:solid rgba(255,255,255,0.5) 10px;
+} 
+
+.van-body .windows .window:nth-of-type(1){
+  margin-left:170px;
+}
+
+.van-body .windows .window:nth-of-type(3)
+{
+      border-radius: 5px 70px 5px 5px;
+}
+
+.top{
+  width:370px;
+  height:15px;
+  background:top;
+  border-radius:10px 15px 0 0px;
+}
+
+.roof{
+  position:relative;
+  width:100%;
+}
+.rod{
+  width:10px;
+  height:15px;
+  background:rgb(177, 44, 44);
+  position:absolute;
+  right:90px;
+  top:-10px;
+  z-index:-1;
+}
+.board{
+  width:200px;
+  height:8px;
+   background:#555;
+   position:absolute;
+  right:70px;
+  top:-18px;
+}
+
+.rod:nth-child(1)
+{
+  right:240px;
+}
+.wheels{
+  position:relative;
+}
+.wheel{
+  position:absolute;
+  right:40px;
+  top:-30px;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:#fff;
+  border:solid wheel 12px; 
+  z-index:2;
+  animation: spin .8s linear infinite;
+}
+.wheels .wheel:nth-child(2){
+  right:280px;
+}
+
+.road{
+  width:100%;
+  height:500px;
+  background:#222;
+  margin-top:-2px;
+}
+
+.wheel:after{
+ content: '';
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.shooting{
+  width:100px;
+  height:3px;
+  background:#fff;
+  position:absolute;
+  transform:rotate(40deg);
+  border-radius:50%;
+  box-shadow:0 0 20px #fff;
+  animation: shoot 5s ease infinite;
+}
+
+
+@keyframes shoot {
+  0% {
+    top: 0;
+    left:0;
+  }
+  20%{
+    top: 80%;
+    left:100%;
+  }
+  100%{
+    top: 80%;
+    left:100%;
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    top: 0px;
+  }
+  
+  100% {
+    top: 5px;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 60px #fff;
+  }
+  
+  100% {
+    box-shadow: 0 0 100px #fff;
+  }
+}
+
+
+@keyframes travel {
+  0% {
+   margin-left:-500px;
+  }
+  
+  100% {
+    margin-left:500px;
+  }
+}
+/*--------------------------------PROFILE CSS START----------------------------------------------------*/
+
+/* NavbarTop */
+.navbar-top {
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0px 4px 8px 0px grey;
+  height: 70px;
+}
+
+.title {
+  font-family: 'Dancing Script', cursive;
+  padding-top: 15px;
+  position: absolute;
+  left: 45%;
+}
+
+.navbar-top ul {
+  float: right;
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 18px 50px 0 40px;
+}
+
+.navbar-top ul li {
+  float: left;
+}
+
+.navbar-top ul li a {
+  color: #333;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
+}
+/* End */
+
+/* Sidenav */
+.sidenav {
+  background-color: #fff;
+  color: #333;
+  border-bottom-right-radius: 25px;
+  height: 86%;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  position: absolute;
+  top: 70px;
+  width: 250px;
+}
+
+.profile {
+  margin-bottom: 20px;
+  margin-top: -12px;
+  text-align: center;
+}
+
+.profile img {
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px 1px grey;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.job {
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+/* Main */
+.main {
+  margin-top: 2%;
+  margin-left: 29%;
+  font-size: 28px;
+  padding: 0 10px;
+  width: 58%;
+}
+
+.main h2 {
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.main .card {
+  background-color: #fff;
+  border-radius: 18px;
+  box-shadow: 1px 1px 8px 0 grey;
+  height: auto;
+  margin-bottom: 20px;
+  padding: 20px 0 20px 50px;
+}
+
+.main .card table {
+  border: none;
+  font-size: 16px;
+  height: 270px;
+  width: 80%;
+}
+
+
+
+
+/*----------------------------------PROFILE END------------------------------------------------*/
 @media (max-width: 1200px) {
   .header {
     padding: 2rem;
@@ -294,5 +640,5 @@ body{
     font-size: 3rem;
   }
 }
-/*# sourceMappingURL=style.css.map */
+
 
