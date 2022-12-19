@@ -1,133 +1,94 @@
-let navbar = document.querySelector('.header .navbar');
 
-document.querySelector('#menu-btn').onclick = () =>{
-    navbar.classList.add('active');
-}
 
-document.querySelector('#nav-close').onclick = () =>{
-    navbar.classList.remove('active');
-}
+/* Please ❤ this if you like it! */
 
-let searchForm = document.querySelector('.search-form');
 
-document.querySelector('#search-btn').onclick = () =>{
-    searchForm.classList.add('active');
-}
 
-document.querySelector('#close-search').onclick = () =>{
-    searchForm.classList.remove('active');
-}
+(function($) { "use strict";
 
-window.onscroll = () =>{
-    navbar.classList.remove('active');
+    //Page cursors
 
-    if(window.scrollY > 0){
-        document.querySelector('.header').classList.add('active');
-    }else{
-        document.querySelector('.header').classList.remove('active');
+    document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n) {
+        t.style.left = n.clientX + "px",
+            t.style.top = n.clientY + "px",
+            e.style.left = n.clientX + "px",
+            e.style.top = n.clientY + "px",
+            i.style.left = n.clientX + "px",
+            i.style.top = n.clientY + "px"
+    });
+    var t = document.getElementById("cursor"),
+        e = document.getElementById("cursor2"),
+        i = document.getElementById("cursor3");
+    function n(t) {
+        e.classList.add("hover"), i.classList.add("hover")
     }
-};
-
-window.onload = () =>{
-    if(window.scrollY > 0){
-        document.querySelector('.header').classList.add('active');
-    }else{
-        document.querySelector('.header').classList.remove('active');
+    function s(t) {
+        e.classList.remove("hover"), i.classList.remove("hover")
     }
-};
+    s();
+    for (var r = document.querySelectorAll(".hover-target"), a = r.length - 1; a >= 0; a--) {
+        o(r[a])
+    }
+    function o(t) {
+        t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
+    }
 
 
-var swiper = new Swiper(".home-slider", {
-    loop:true, 
-    grabCursor:true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-});
+    //Switch light/dark
 
-var swiper = new Swiper(".product-slider", {
-    loop:true, 
-    grabCursor:true,
-    spaceBetween: 20,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-        0: {
-          slidesPerView: 1,
-        },
-        640: {
-          slidesPerView: 2,
-        },
-        768: {
-          slidesPerView: 3,
-        },
-        1024: {
-          slidesPerView: 4,
-        },
-    },
-});
+    $(".switch").on('click', function () {
+        if ($("body").hasClass("light")) {
+            $("body").removeClass("light");
+            $(".switch").removeClass("switched");
+        }
+        else {
+            $("body").addClass("light");
+            $(".switch").addClass("switched");
+        }
+    });
 
-var swiper = new Swiper(".review-slider", {
-    loop:true, 
-    grabCursor:true,
-    spaceBetween: 20,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-        0: {
-          slidesPerView: 1,
-        },
-        640: {
-          slidesPerView: 2,
-        },
-        768: {
-          slidesPerView: 3,
-        },
-    },
-});
+    $(document).ready(function() {
 
-var swiper = new Swiper(".blogs-slider", {
-    loop:true, 
-    grabCursor:true,
-    spaceBetween: 10,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-        0: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 2,
-        },
-        991: {
-          slidesPerView: 3,
-        },
-    },
-});
+        /* Hero Case study images */
 
-var swiper = new Swiper(".clients-slider", {
-    loop:true, 
-    grabCursor:true,
-    spaceBetween: 20,
-    breakpoints: {
-        0: {
-          slidesPerView: 1,
-        },
-        640: {
-          slidesPerView: 2,
-        },
-        768: {
-          slidesPerView: 3,
-        },
-        1024: {
-          slidesPerView: 4,
-        },
-    },
-});
+        $('.slide-buttons li:nth-child(1)').on('mouseenter', function() {
+            $('.slide-buttons li.active').removeClass('active');
+            $('.hero-center-section.show').removeClass("show");
+            $('.hero-center-section:nth-child(1)').addClass("show");
+            $('.slide-buttons li:nth-child(1)').addClass('active');
+        })
+        $('.slide-buttons li:nth-child(2)').on('mouseenter', function() {
+            $('.slide-buttons li.active').removeClass('active');
+            $('.hero-center-section.show').removeClass("show");
+            $('.hero-center-section:nth-child(2)').addClass("show");
+            $('.slide-buttons li:nth-child(2)').addClass('active');
+        })
+        $('.slide-buttons li:nth-child(3)').on('mouseenter', function() {
+            $('.slide-buttons li.active').removeClass('active');
+            $('.hero-center-section.show').removeClass("show");
+            $('.hero-center-section:nth-child(3)').addClass("show");
+            $('.slide-buttons li:nth-child(3)').addClass('active');
+        })
+        $('.slide-buttons li:nth-child(4)').on('mouseenter', function() {
+            $('.slide-buttons li.active').removeClass('active');
+            $('.hero-center-section.show').removeClass("show");
+            $('.hero-center-section:nth-child(4)').addClass("show");
+            $('.slide-buttons li:nth-child(4)').addClass('active');
+        })
+        $('.slide-buttons li:nth-child(5)').on('mouseenter', function() {
+            $('.slide-buttons li.active').removeClass('active');
+            $('.hero-center-section.show').removeClass("show");
+            $('.hero-center-section:nth-child(5)').addClass("show");
+            $('.slide-buttons li:nth-child(5)').addClass('active');
+        })
+        $('.slide-buttons li:nth-child(6)').on('mouseenter', function() {
+            $('.slide-buttons li.active').removeClass('active');
+            $('.hero-center-section.show').removeClass("show");
+            $('.hero-center-section:nth-child(6)').addClass("show");
+            $('.slide-buttons li:nth-child(6)').addClass('active');
+        })
+        $('.slide-buttons li:nth-child(1)').trigger('mouseenter')
+
+    });
+
+})(jQuery);
