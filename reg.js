@@ -163,7 +163,7 @@ function log_php(lastEmail, lastPassword) {
             console.log(result);
             if (result == "Logged IN!") {
                 alert("fasfafs")
-                window.open("index.html", "_self")
+                window.open("/INDEX/index.html", "_self")
             } else window.alert("Wrong login or password")
         },
         error: function () {
