@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Contact us</title>
-	<link rel="stylesheet" type="text/css" href="contact.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" type="text/css" href="contact.css">
+    <!--	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!--    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
 </head>
 <body>
-	<div class="container">
-		<div class="contact-box">
-			<div class="left"></div>
-			<div class="right">
-				<h2>Contact Us</h2>
-				<input type="text" class="field" placeholder="Your Name">
-				<input type="text" class="field" placeholder="Your Email">
-				<input type="text" class="field" placeholder="Phone">
-				<textarea placeholder="Message" class="field"></textarea>
-				<button class="btn">Send</button>
-			</div>
-		</div>
-	</div>
+<div style="display: flex">
+<a href="/Final/INDEX/index.html"><img src="imgcon/logotip-removebg-preview.png" width="80" height="80" style="border-radius: 50%"></a>
+<div id="cont" class="contact-us">
+    <div class="overlay">
+        <div class="container">
+            <div class="contact">
+                <h2 class="special-heading">CONTACT US</h2>
+                <form>
+                    <input class="one" type="text" name="text" placeholder="name">
+                    <input class="two" type="email" name="email" placeholder="e-mail">
+                    <input class="three" type="text" name="number" placeholder="phone">
+                    <input class="four" type="text" name="text" placeholder="city">
+                    <textarea class="five" placeholder="message"></textarea>
+                    <div class="click">
+                        <button>send</button>
+                        <button>reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    <canvas id="canvas"></canvas>
+<script src="contact.js"></script>
 </body>
 </html>

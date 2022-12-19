@@ -1,139 +1,125 @@
-*{
+* {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: 'Quicksand', sans-serif;
 }
 
 body{
-	height: 100vh;
-	width: 100%;
+	background-color: #222222;
 }
-
-.container{
+.contact-us {
+	margin: 0 auto;
+	width: 0;
+	height: 0;
+	background-image: url(../image/4.jpg);
+	-webkit-animation: all 1.5s 8 es;
+	overflow: hidden;
+	padding: 30px 0 20px;
+	color: #fff;
 	position: relative;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 20px 100px;
-}
-
-.container:after{
-	content: '';
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
-	background: url("imgcon/bg.jpg") no-repeat center;
-	background-size: cover;
-	filter: blur(50px);
-	z-index: -1;
-}
-.contact-box{
-	max-width: 850px;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	justify-content: center;
-	align-items: center;
 	text-align: center;
-	background-color: #fff;
-	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+
+
+
 }
 
-.left{
-	background: url("imgcon/bg.jpg") no-repeat center;
-	background-size: cover;
-	height: 100%;
-}
-
-.right{
-	padding: 25px 40px;
-}
-
-h2{
-	position: relative;
-	padding: 0 0 10px;
-	margin-bottom: 10px;
-}
-
-h2:after{
-	content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    height: 4px;
-    width: 50px;
-    border-radius: 2px;
-    background-color: #219150;
-}
-
-.field{
-	width: 100%;
-	border: 2px solid rgba(0, 0, 0, 0);
-	outline: none;
-	background-color: rgba(230, 230, 230, 0.6);
-	padding: 0.5rem 1rem;
-	font-size: 1.1rem;
-	margin-bottom: 22px;
-	transition: .3s;
-}
-
-.field:hover{
-	background-color: rgba(0, 0, 0, 0.1);
-}
-
-textarea{
-	min-height: 150px;
-}
-
-button {
-	padding: 20px 40px;
-	background: none;
-	border: none;
-	position: relative;
-	text-transform: uppercase;
-	font-weight: bold;
-	letter-spacing: 3px;
-	cursor: pointer;
-  }
-  button:after, button:before {
-	content: "";
+.contact-us .overlay {
 	position: absolute;
-	top: 0;
 	left: 0;
-	bottom: 0;
+	top: 0;
 	right: 0;
-	border: 2px solid #000;
-	transition: transform 0.2s;
-  }
-  button:after {
-	transform: translate(3px, 3px);
-  }
-  button:before {
-	transform: translate(-3px, -3px);
-  }
-  button:hover:after, button:hover:before {
-	transform: translate(0);
-  }
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	/*background-color: rgba(0, 0, 0, .8);*/
+	background-color: black;
 
-.btn:hover{
-    background-color:  #219150;
 }
 
-.field:focus{
-    border: 2px solid rgba(30,85,250,0.47);
-    background-color: #fff;
+.contact {
+	position: relative
 }
 
-@media screen and (max-width: 880px){
-	.contact-box{
-		grid-template-columns: 1fr;
-	}
-	.left{
-		height: 200px;
-	}
+.contact-us h2 {
+	padding-bottom: 50px
+}
+
+.contact form input[type="text"],
+.contact form input[type="email"],
+.contact form input[type="city"] {
+	width: 35%;
+	margin-bottom: 2%;
+	background-color: transparent;
+	padding: 0 10px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 5px;
+	border: 1px solid #B53532;
+	text-transform: capitalize;
+	cursor: pointer;
+	outline: 0;
+	display: none
+
+}
+
+.contact form .one,
+.contact form .three{
+	margin-left: -200px;
+
+
+}
+
+.contact form .two,
+.contact form .four {
+	margin-right: -200px
+}
+
+.contact form .five {
+	display: none
+}
+
+.contact form textarea {
+	background-color: transparent;
+	margin-top: 20px;
+	width: 55%;
+	padding: 10px;
+	height: 200px;
+	border-radius: 10px;
+	border: 1px solid #B53532;
+	text-transform: capitalize;
+	color: #ddd;
+	cursor: pointer;
+	outline: 0;
+}
+
+.contact form .click {
+	text-align: center;
+
+}
+
+.contact form .click .six {
+	display: none;
+	margin-left: -400px
+}
+
+.contact form .click .six {
+	display: none;
+	margin-right: -400px
+}
+
+.contact form button{
+	background-color: transparent;
+	margin-top: 20px;
+	width: 15%;
+	padding: 10px;
+	height: 40px;
+	border-radius:5px;
+	cursor: pointer;
+	outline: 0;
+	border: 1px solid #B53532;
+	color: #ddd
+}
+
+canvas {
+	display: block;
 }
