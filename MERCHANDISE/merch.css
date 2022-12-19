@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+:root{
+  --clr-font-dark-100:#121;
+  --clr-font-dark-200:#232;
+  --clr-side:rgb(21, 118, 69);
+  --clr-card:#efe;
+  --clr-body:#dec;
+}
+
+body{
+  margin:0;
+  display:grid;
+  grid-template: 
+    "head head head head" min-content
+    "hero hero hero hero" 50vh
+    ". main side ." auto
+    "foot foot foot foot" min-content 
+    / 1fr 5fr 1fr 1fr;
+  grid-column-gap: 2rem;
+  
+  font-family: 'Poppins', sans-serif;
+  background:var(--clr-body);
+  
+  animation-duration:5s;
+}
+
+header, footer{
+  background:#010;
+  color:white;
+  padding:.5rem;
+  z-index:2;
+}
+
+header{
+  grid-area:head;
+}
+footer{
+  grid-area:foot;
+}
+
+.hero{
+  color:white;
+  background: url(https://www.oxfordmartin.ox.ac.uk/images/_1400x450_crop_center-center_none/AdobeStock_274966107_Nature_based_Solutions.jpeg) center no-repeat;
+  background-size:cover;
+  box-shadow:0 0 10px black;
+  z-index:1;
+  
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  
+  grid-area:hero;
+  
+}
+.hero > h1{
+  margin:0;
+  font-size:4rem;
+  text-shadow: 0px 0px 4px rgb(48, 204, 58);
+}
+
+main{
+  grid-area:main;
+}
+
+main>h3{
+  color:var(--clr-font-dark-100);
+}
+
+.card{
+  background:var(--clr-card);
+  color:var(--clr-font-dark-200);
+  box-shadow:0 0 10px gray;
+  margin:2rem;
+  margin-left:0;
+  margin-right:0;
+  border-radius: 10px;
+  display:grid;
+  grid-template:
+    "img head" min-content
+    "img text" auto
+    / minmax(50px,1fr) 3fr;
+  grid-column-gap: 2rem;
+}
+.card img{
+  grid-area:img;
+  width:100%;
+  margin:1rem;
+  border-radius:10px;
+}
+.card h3{
+  
+  grid-area:head;
+}
+.card p{
+  margin-top:0;
+  padding-right:2rem;
+  grid-area:text;
+}
+
+.sidebar{
+  filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+  z-index:0;
+  margin:0;
+  padding:0;
+  grid-area:side;
+  min-width:150px;
+}
+.sidebar-content{
+  background:var(--clr-side);
+  color:white;
+  height:max-content;
+  width:auto;
+  margin:0;
+  padding:1rem;
+  position:relative;
+}
+
+button {
+	padding: 10px 60px;
+	background: none;
+	border: none;
+	position: relative;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 3px;
+	cursor: pointer;
+	margin-left: 70px;
+  }
+  button:after, button:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	border: 1px solid #000;
+	transition: transform 0.2s;
+  }
+  button:after {
+	transform: translate(3px, 3px);
+  }
+  button:before {
+	transform: translate(-3px, -3px);
+  }
+  button:hover:after, button:hover:before {
+	transform: translate(0);
+  }
+
+.btn:hover{
+    background-color: rgb(21, 118, 69);
+}
+
+
+
+@media only screen and (min-width: 650px) {
+.sidebar-content:after{
+  position:absolute;
+  top:100%;
+  left:0;
+  width:100%;
+  height:50px;
+  content:'';
+  background:var(--clr-side);
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+}
+
+.sidebar-content a {
+  color:white;
+}
+.sidebar-content > ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.sidebar-content > ul li:before{
+  content:'🌳 ';
+}
+
+
+@media only screen and (max-width: 650px) {
+  body{
+    display:flex;
+    flex-direction:column;
+  }
+  
+  .hero{
+    text-align:center;
+  }
+  
+  main{
+    padding-left:2rem;
+    padding-right:2rem;
+  }
+  main>h3{
+    padding:0;
+    text-align:center;
+  }
+  .sidebar-content ul li{
+    display: inline;
+  }
+  .sidebar-content ul{
+    text-align:center;
+  }
+  .sidebar-content{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  
+  .hero{
+    padding:2rem;
+  }
+} 
