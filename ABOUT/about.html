@@ -118,6 +118,7 @@
 
 <a href="/Final/INDEX/index.html" class="link-to-page hover-target" target="_self"><img src="imgabout/logotip-removebg-preview.png"  style="border-radius: 50%" alt=""></a>
 
+
 <!-- Dark/light switch
 ================================================== -->
 
@@ -126,7 +127,8 @@
         <div class="circle hover-target"></div>
     </div>
 </div>
-<script src="about.js"></script>
-<script src="/FINAL/reg.js"></script>
+<script src="about.js">
+    document.getElementById("prof").innerHTML = sessionStorage.getItem('cur_user');
+</script>
 </body>
 </html>

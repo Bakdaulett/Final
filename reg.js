@@ -195,7 +195,9 @@ function reg_php(email, pass, pass2, username) {
 }
 
 function checkUser(){
-    document.getElementById("prof").innerHTML = sessionStorage.getItem('cur_user');
-    window.alert(sessionStorage.getItem('cur_user'));
+    if(sessionStorage.getItem('cur_user') == null)
+        document.getElementById("prof").innerHTML = "GUEST";
+    else
+        document.getElementById("prof").innerHTML = sessionStorage.getItem('cur_user');
 }
 
