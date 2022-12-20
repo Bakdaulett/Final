@@ -5,7 +5,7 @@
 }
 
 body{
-	background-color: #222222;
+	background-color: black;
 }
 .contact-us {
 	margin: 0 auto;
@@ -15,7 +15,7 @@ body{
 	-webkit-animation: all 1.5s 8 es;
 	overflow: hidden;
 	padding: 30px 0 20px;
-	color: #fff;
+	color: rgb(168, 204, 133);;
 	position: relative;
 	text-align: center;
 
@@ -41,7 +41,8 @@ body{
 }
 
 .contact-us h2 {
-	padding-bottom: 50px
+	padding-bottom: 50px;
+	margin-top: 30px;
 }
 
 .contact form input[type="text"],
@@ -54,7 +55,7 @@ body{
 	height: 40px;
 	line-height: 40px;
 	border-radius: 5px;
-	border: 1px solid #B53532;
+	border: 2px solid rgb(168, 204, 133);;
 	text-transform: capitalize;
 	cursor: pointer;
 	outline: 0;
@@ -85,7 +86,7 @@ body{
 	padding: 10px;
 	height: 200px;
 	border-radius: 10px;
-	border: 1px solid #B53532;
+	border: 2px solid rgb(168, 204, 133);
 	text-transform: capitalize;
 	color: #ddd;
 	cursor: pointer;
@@ -116,7 +117,7 @@ body{
 	border-radius:5px;
 	cursor: pointer;
 	outline: 0;
-	border: 1px solid #B53532;
+	border: 2px solid rgb(168, 204, 133);;
 	color: #ddd
 }
 

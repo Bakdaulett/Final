@@ -16,7 +16,7 @@ body {
 /*//display: flex;*/
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.787);
+  background:white;
 /*//overflow: hidden;*/
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -29,8 +29,10 @@ body {
 /*//text-transform: capitalize;*/
 /*//-webkit-transition: .2s linear;*/
 /*//transition: .2s linear;*/
-
 }
+
+
+
 button {
   border: none;
   background: none;
@@ -423,7 +425,7 @@ section {
 
 .services .box-container .box h3 {
   font-size: 2rem;
-  color: red;
+  color: green;
 }
 
 .services .box-container .box p {
