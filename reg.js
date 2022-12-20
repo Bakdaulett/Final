@@ -139,16 +139,16 @@ login.addEventListener("click", () => {
     container.classList.remove("active");
 });
 
-// function check() {
-//     let x1 = document.getElementById("p1").value;
-//     let x2 = document.getElementById("p2").value;
-//     if (x1===x2 && x1.length >= 8) {
-//         window.alert("Congratulations! You logged in successfully!");
-//     } else {
-//         document.getElementById("p1").value = "";
-//         document.getElementById("p2").value = "";
-//     }
-// }
+function check() {
+    let x1 = document.getElementById("p1").value;
+    let x2 = document.getElementById("p2").value;
+    if (x1===x2 && x1.length >= 8) {
+        window.alert("Congratulations! You logged in successfully!");
+    } else {
+        document.getElementById("p1").value = "";
+        document.getElementById("p2").value = "";
+    }
+}
 
 document.querySelector("form").addEventListener('submit',(event)=>{
     event.preventDefault();

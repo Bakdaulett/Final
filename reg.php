@@ -26,6 +26,7 @@ if (isset($_POST['email'])) {
 
     if ($result) {
         echo "Success!";
+        exit();
     } else {
         echo "Wrong!";
     }
