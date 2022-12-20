@@ -852,3 +852,8 @@ h1 {
         width: 30%;
     }
 }
+
+.holder p:hover{
+    color: black;
+    cursor: pointer;
+}

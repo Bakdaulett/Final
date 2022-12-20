@@ -140,13 +140,13 @@ login.addEventListener("click", () => {
 });
 
 function check() {
-    let x1 = document.getElementById("p1").value;
-    let x2 = document.getElementById("p2").value;
+    let x1 = document.getElementById("pass").value;
+    let x2 = document.getElementById("pass2").value;
     if (x1===x2 && x1.length >= 8) {
         window.alert("Congratulations! You logged in successfully!");
     } else {
-        document.getElementById("p1").value = "";
-        document.getElementById("p2").value = "";
+        document.getElementById("pass").value = "";
+        document.getElementById("pass2").value = "";
     }
 }
 
@@ -176,14 +176,14 @@ function log_php(lastEmail, lastPassword) {
 
 
 function reg_php(email, pass, pass2, username) {
-    if (pass == pass2) {
+    if (pass === pass2) {
         $.ajax({
             url: 'reg.php',
             type: 'POST',
             data: {email: email, password: pass, username: username},
             success: function (result) {
                 console.log(result);
-                if (result == "Success!")
+                if (result === "Success!")
                     window.alert("Success");
                 else window.alert("Wrong input");
             },

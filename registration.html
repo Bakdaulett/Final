@@ -6,11 +6,16 @@
     <link href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" rel="stylesheet">
     <link href="reg.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <link href="images/logo-clickpaw.png" rel="shortcut icon"
+    <link href="/FINAL/INDEX/images/logotip-preview.png" rel="shortcut icon"
           type="image/x-icon"/>
     <title>Registration or Login</title>
 </head>
 <body>
+<a style="cursor: pointer" href = "/FINAL/INDEX/index.html">
+    <div style="margin: -100px 0 500px -500px;">
+        <img class="logo-travel" src="/FINAL/INDEX/images/logotip-preview.png" width="85vw" height="75vw" alt="LOGO" style="border-radius: 50%"/>
+    </div>
+</a>
 <div class="container">
     <div class="forms">
         <div class="form login">
@@ -46,7 +51,7 @@
             <span class="title" style="">Registration</span>
             <form action="#">
                 <div class="input-field">
-                    <input placeholder="Enter your name" required type="text"autocomplete="on" name = "username" id = "username">
+                    <input placeholder="Enter your name" required type="text" autocomplete="on" name = "username" id = "username">
                     <i class="uil uil-user"></i>
                 </div>
                 <div class="input-field">
@@ -80,7 +85,7 @@
                 </div>
 
                 <div class="input-field button">
-                    <input onclick="reg_php(email.value, pass.value, pass2.value, username.value)" type="submit" value="Signup">
+                    <input onclick="reg_php(email.value, pass.value, pass2.value, username.value), check()" type="submit" value="Signup">
                 </div>
             </form>
 
