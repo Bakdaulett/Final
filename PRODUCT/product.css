@@ -42,7 +42,7 @@ section {
 
 .btn {
   margin-top: 1rem;
-  display: inline-block;
+  display: inline-block; 
   border: 0.2rem solid #10221b;
   color: #10221b;
   cursor: pointer;
@@ -71,7 +71,7 @@ section {
 
 .packages .box-container {
   display: grid;
-  -ms-grid-columns: (minmax(rem, 1fr))[auto-fit];
+  -ms-grid-columns: (minmax(32rem, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
   gap: 1.5rem;
 }
@@ -272,7 +272,6 @@ body{
   height:170px;
   background:black;
   border-radius: 20px 80px 10px 10px;
-  z-index:1;
   position:relative;
   animation: bounce .25s ease-in-out infinite alternate;
 }
