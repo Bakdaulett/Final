@@ -18,13 +18,14 @@ if(isset($_POST['email'])){
 
 
     $result = mysqli_query($link, $sql);
+    $data = $result->fetch_assoc();
 
     if(mysqli_num_rows($result) == 1){
-        echo "login";
+        echo $data['username'];
         exit();
     }
     else{
-        echo "Wrong data!";
+        echo "Wrong!";
     }
 }
 
