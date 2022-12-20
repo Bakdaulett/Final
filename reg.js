@@ -154,17 +154,15 @@ document.querySelector("form").addEventListener('submit',(event)=>{
     event.preventDefault();
 })
 function log_php(lastEmail, lastPassword) {
-    // var link = document.createElement("a")
-    // link.href = "index.html";
-    // link.target = "_blank";
     $.ajax({
         url: 'log.php',
         type: 'POST',
         data: {email: lastEmail, password: lastPassword},
         success: function (result) {
             console.log(result);
-            if (result === "login") {
-                window.open("/Final/INDEX/index.html", "_self")
+            if (result !== "Wrong!") {
+                sessionStorage.setItem('cur_user', result);
+                window.location.replace('./INDEX/index.html');
             } else window.alert("Wrong login or password")
         },
         error: function () {
@@ -196,9 +194,8 @@ function reg_php(email, pass, pass2, username) {
     }
 }
 
-// function onClicking(element) {
-//     var a = element;
-//
-// }
-
+function checkUser(){
+    document.getElementById("prof").innerHTML = sessionStorage.getItem('cur_user');
+    window.alert(sessionStorage.getItem('cur_user'));
+}
 

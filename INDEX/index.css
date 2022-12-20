@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700');
 
 * {
     text-rendering: optimizeLegibility;
@@ -852,8 +852,13 @@ h1 {
         width: 30%;
     }
 }
+.guest{
+    margin: 2vw 0 0 90vw;
+}
 
-.holder p:hover{
-    color: black;
-    cursor: pointer;
+.guest p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1vw;
+    color: white;
+    font-weight: 600;
 }

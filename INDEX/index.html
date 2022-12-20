@@ -9,10 +9,9 @@
     <link href="/FINAL/INDEX/images/logotip-preview.png" rel="shortcut icon"
           type="image/x-icon"/>
 </head>
-<body>
-
+<body onload="checkUser()">
 <header>
-
+<div class = "guest"><p id="prof">Guest Salam</p></div>
     <div class="mouse-bulge" id="overlay-trigger">
         <div id="trigger">
             <div class="trigger-line"></div>
@@ -36,18 +35,18 @@
         <li><a href="/Final/FEEDBACK/feedback.html" class="mouse-bulge">FEEDBACK</a></li>
         <li><a href="/Final/CONTACT/contact.html" class="mouse-bulge">CONTACT</a></li>
     </ul>
+    <div id ="contacts-holder" class = "holder">
+        <p style="font-weight: bold; font-size: 16px; color: #828080;">CONTACT</p>
+        <p>+777 777 77 77</p>
+        <p>210103777@stu.sdu.edu.kz</p>
+        <p>Joining US, Qaskelen - SDU</p>
+    </div>
     <svg id="bg-design1" class="bg-design" viewBox="0 0 100 100" preserveAspectRatio="none">
         <polygon points="0 25, 0 85, 100 65, 100 05" style="fill: #219150;"/>
     </svg>
     <svg id="bg-design2" class="bg-design" viewBox="0 0 100 100" preserveAspectRatio="none">
         <polygon points="50 75, 100 85, 100 65" style="fill: #85FFBD;"/>
     </svg>
-    <div id ="contacts-holder" class = "holder">
-        <p style="font-weight: bold; font-size: 16px; color: 	#828080;">CONTACT</p>
-        <p>+777 777 77 77</p>
-        <p>210103777@stu.sdu.edu.kz</p>
-        <p>Joining US, Qaskelen - SDU</p>
-    </div>
 </nav>
 <main>
     <section class="main-section" id="banner">
@@ -84,7 +83,9 @@
         </div>
     </div>
 </footer>
-<script src="index.js">
+<script src="index.js"></script>
+<script>
+    document.getElementById("prof").innerHTML = sessionStorage.getItem('cur_user');
 </script>
 </body>
 </html>
