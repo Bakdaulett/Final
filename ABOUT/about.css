@@ -482,3 +482,14 @@ body.light .hero-center-section .left-text{
     font-weight: 700;
   }
 }
+
+.guest{
+  margin: 2vw 0 0 90vw;
+}
+
+.guest p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1vw;
+  color: white;
+  font-weight: 600;
+}

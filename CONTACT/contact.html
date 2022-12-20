@@ -35,7 +35,8 @@
 </div>
 </div>
     <canvas id="canvas"></canvas>
-<script src="contact.js"></script>
-<script src="/Final/reg.js"></script>
+<script src="contact.js">
+    document.getElementById("prof").innerHTML = sessionStorage.getItem('cur_user');
+</script>
 </body>
 </html>

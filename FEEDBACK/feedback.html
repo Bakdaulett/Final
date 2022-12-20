@@ -118,7 +118,8 @@
     </div>
 </div>
 <!--Content ends-->
-<script src="feedback.js"></script>
-<script src="/FINAL/reg.js"></script>
+<script src="feedback.js">
+    document.getElementById("prof").innerHTML = sessionStorage.getItem('cur_user');
+</script>
 </body>
 </html>
